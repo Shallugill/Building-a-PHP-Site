@@ -1,0 +1,221 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling with Animated Gradient */
+@keyframes animatedBackground {
+  0% { background: #211a44; }
+  50% { background: #3f703f; }
+  100% { background: #00484d; }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  animation: animatedBackground 8s infinite alternate;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(45deg, #7b772b, #287128);
+  width: 100%;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Logo Styling */
+.logo {
+  margin-left: 20px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+/* Navigation Styling */
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Active Page Highlight */
+nav ul li.active a {
+  background-color: #008000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: 100px 0 20px;
+  border-radius: 10px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* About Page - Profile Image */
+.profile-pic {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 20px auto;
+  border: 5px solid #ffffff;
+}
+
+/* Footer Styling */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+
+  header {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+.auth-buttons {
+  margin-top: 20px;
+}
+
+.auth-buttons .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background: #008000;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.auth-buttons .btn:hover {
+  background: #00b300;
+  transform: scale(1.05);
+}
+/* Ensure the body takes up the full viewport height */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content grows to push footer down */
+main {
+  flex: 1;
+}
+
+/* Sticky footer at the bottom */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  margin-top: auto;
+}
+.inquiry-box {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.inquiry-box input,
+.inquiry-box textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.inquiry-box button {
+  background: #008000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.inquiry-box {
+  display: block !important;
+}
